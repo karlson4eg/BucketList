@@ -4,47 +4,52 @@
 //
 //  Created by Evi St on 4/23/22.
 //
-import LocalAuthentication
+import MapKit
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isUnlocked = false
-    
+    @State private var mapregion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
+    @State private var locations = [Location]()
     
     var body: some View {
-        VStack{
-            if isUnlocked{
-                Text("Unclocked")
-            } else {
-                Text("Locked")
+        ZStack {
+            Map(coordinateRegion: $mapregion, annotationItems: locations) { location in
+                MapMarker(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longtitude))
+            }
+                .ignoresSafeArea()
+            
+            Circle()
+                .fill(.blue)
+                .opacity(0.3)
+                .frame(width: 32, height: 32)
+            
+            VStack{
+                Spacer()
+                
+                HStack {
+                    Spacer()
+                    
+                    Button{
+                        let newLocation = Location(id: UUID(), name: "New Location", description: "", latitude: mapregion.center.latitude, longtitude: mapregion.center.longitude)
+                        
+                        locations.append(newLocation)
+                        
+                        
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .padding()
+                    .background(.black.opacity(0.75))
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .clipShape(Circle())
+                    .padding(.trailing)
+                }
             }
         }
-        .onAppear(perform: authenticate)
+        
     }
     
-    func authenticate() {
-        let context = LAContext()
-        var error: NSError?
-        
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            let reason = "We need to unlock your data"
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-                if success {
-                    // good to go
-                    isUnlocked = true
-                    
-                } else {
-                    // mask on
-                    
-                }
-                
-            }
-        } else {
-            // no biometrics
-            
-        }
-        
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
