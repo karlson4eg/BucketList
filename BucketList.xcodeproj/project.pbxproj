@@ -14,6 +14,8 @@
 		0357D5CD2815B68F003FC266 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5CC2815B68F003FC266 /* Location.swift */; };
 		0357D5CF2815BEDE003FC266 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5CE2815BEDE003FC266 /* EditView.swift */; };
 		0357D5D12816B2C9003FC266 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5D02816B2C9003FC266 /* Result.swift */; };
+		0357D5D32816BDED003FC266 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5D22816BDED003FC266 /* ContentView-ViewModel.swift */; };
+		0357D5D52816C2EF003FC266 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0357D5D42816C2EF003FC266 /* FileManager-DocumentsDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		0357D5CC2815B68F003FC266 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		0357D5CE2815BEDE003FC266 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		0357D5D02816B2C9003FC266 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0357D5D22816BDED003FC266 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		0357D5D42816C2EF003FC266 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				03572267281473B300FDBC3B /* ContentView.swift */,
 				0357D5D02816B2C9003FC266 /* Result.swift */,
 				0357D5CE2815BEDE003FC266 /* EditView.swift */,
+				0357D5D22816BDED003FC266 /* ContentView-ViewModel.swift */,
+				0357D5D42816C2EF003FC266 /* FileManager-DocumentsDirectory.swift */,
 				0357D5CC2815B68F003FC266 /* Location.swift */,
 				03572269281473B500FDBC3B /* Assets.xcassets */,
 				0357226B281473B500FDBC3B /* Preview Content */,
@@ -147,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				03572268281473B300FDBC3B /* ContentView.swift in Sources */,
+				0357D5D52816C2EF003FC266 /* FileManager-DocumentsDirectory.swift in Sources */,
+				0357D5D32816BDED003FC266 /* ContentView-ViewModel.swift in Sources */,
 				0357D5D12816B2C9003FC266 /* Result.swift in Sources */,
 				0357D5CD2815B68F003FC266 /* Location.swift in Sources */,
 				0357D5CF2815BEDE003FC266 /* EditView.swift in Sources */,
